@@ -4,7 +4,7 @@
 [![KiCad Version](https://img.shields.io/badge/KiCad-v10.0-blue.svg)](https://kicad.org/)
 [![Status](https://img.shields.io/badge/Status-Design_Completed-success.svg)]()
 
-A compact, high-performance, **4-layer IoT Control Board** powered by the Espressif ESP32 microcontroller. This board is designed for smart automation, edge computing, and wireless sensor networking, featuring optimized power delivery and signal integrity.
+A compact, high-performance, **4-layer IoT Control Board** powered by the Espressif ESP32 microcontroller. This board is designed for smart automation, edge computing, and wireless sensor networking, combining robust electrical design with modern PCB engineering practices.
 
 ---
 
@@ -49,10 +49,9 @@ The board utilizes a 4-layer stackup to optimize ground referencing and minimize
 ├── ESP32_IoT_Board_Design.kicad_pcb   # 4-Layer PCB Layout file
 ├── ESP32_IoT_Board_Design.kicad_prl   # Local project workspace preferences
 └── README.md                          # Project documentation
-
+```
 
 ## 🖼️ Gallery & Previews
-
 
 ### 3D Render (Top & Bottom)
 
@@ -72,9 +71,11 @@ To view, edit, or generate manufacturing files (Gerbers) for this project:
 
 1. Download and install **[KiCad EDA v10.0](https://www.kicad.org/)** or higher.
 2. Clone this repository to your local directory:
+
 ```bash
-   git clone https://github.com/perfectreda/ESP32_IoT_Smart_Control_Board.git
+git clone https://github.com/perfectreda/ESP32_IoT_Smart_Control_Board.git
 ```
+
 3. Open KiCad, select **Open Project**, and navigate to `ESP32_IoT_Board_Design.kicad_pro`.
 
 ---
