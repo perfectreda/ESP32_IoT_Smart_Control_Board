@@ -49,3 +49,44 @@ The board utilizes a 4-layer stackup to optimize ground referencing and minimize
 ├── ESP32_IoT_Board_Design.kicad_pcb   # 4-Layer PCB Layout file
 ├── ESP32_IoT_Board_Design.kicad_prl   # Local project workspace preferences
 └── README.md                          # Project documentation
+
+
+## 🖼️ Gallery & Previews
+
+
+### 3D Render (Top & Bottom)
+
+| Top View | Bottom View |
+|----------|-------------|
+| ![Top View](pictures/3d_top.png) | ![Bottom View](pictures/3d_bottom.png) |
+
+### Schematic Preview
+
+![Schematic Preview](pictures/schematic.png)
+
+---
+
+## 💻 Getting Started / How to Open
+
+To view, edit, or generate manufacturing files (Gerbers) for this project:
+
+1. Download and install **[KiCad EDA v10.0](https://www.kicad.org/)** or higher.
+2. Clone this repository to your local directory:
+```bash
+   git clone https://github.com/perfectreda/ESP32_IoT_Smart_Control_Board.git
+```
+3. Open KiCad, select **Open Project**, and navigate to `ESP32_IoT_Board_Design.kicad_pro`.
+
+---
+
+## 📜 Metadata & License
+
+| Field | Details |
+|-------|---------|
+| **Designer** | Larbi Moamed Redha |
+| **Revision** | Rev 0 |
+| **Date** | June 20, 2026 |
+| **License** | CERN-OHL-W-v2 |
+
+Distributed under the **[CERN Open Hardware License v2 - Weakly Reciprocal (CERN-OHL-W-v2)](https://ohwr.org/cern_ohl_w_v2.txt)**.  
+Feel free to use, modify, and distribute this hardware design with proper attribution.
