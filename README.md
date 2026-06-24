@@ -1,30 +1,51 @@
-# ⚡ ESP32 IoT Smart Control Board
+# ESP32 IoT Smart Control Board
 
-A compact, 2-layer **ESP32-based IoT development PCB** designed for real-world embedded systems, USB connectivity, and modular expansion. Built for learning, prototyping, and portfolio-level hardware design.
+[![Hardware License](https://img.shields.io/badge/License-CERN--OHL--W--v2-green.svg)](https://ohwr.org/cern_ohl_w_v2.txt)
+[![KiCad Version](https://img.shields.io/badge/KiCad-v10.0-blue.svg)](https://kicad.org/)
+[![Status](https://img.shields.io/badge/Status-Design_Completed-success.svg)]()
 
----
-
-## 🚀 Overview
-
-This project implements a fully-featured IoT control board based on the ESP32-WROOM-32. It integrates USB communication, regulated power, expansion headers, protection circuitry, and proper RF/layout practices for production-grade design.
-
-Target: **clean schematic + manufacturable PCB + professional documentation**
+A compact, high-performance, **4-layer IoT Control Board** powered by the Espressif ESP32 microcontroller. This board is designed for smart automation, edge computing, and wireless sensor networking, featuring optimized power delivery and signal integrity.
 
 ---
 
-## 🧠 System Architecture
+## 🚀 Features & Specifications
 
-```mermaid
-graph LR
-    PWR[5V Input USB] --> LDO[3.3V Regulator]
-    LDO --> ESP[ESP32-WROOM-32]
+- **Core Microcontroller:** Espressif ESP32 (Wi-Fi & Bluetooth LE connectivity).
+- **PCB Architecture:** Advanced **4-layer stackup** for superior EMI/EMC shielding, high signal integrity, and dedicated power/ground planes.
+- **Power Delivery:** High-efficiency voltage regulation network with robust input shielding (`Net-(J1-SHIELD)`).
+- **Peripherals & I/O:**
+  - Integrated status and debugging LEDs (0603 metric footprints).
+  - External expansion headers (I2C/SPI/UART accessible via standard 01x04 pin headers).
+  - Robust USB/Power connector integration with chassis grounding.
+- **Form Factor:** Optimized compact footprint, built using precise 1.6mm standard thickness standards.
 
-    USB[USB-C Connector] --> UART[USB-UART Bridge]
-    UART --> ESP
+---
 
-    ESP --> I2C[I2C Header]
-    ESP --> SPI[SPI Header]
-    ESP --> GPIO[GPIO Expansion]
-    ESP --> BTN[Boot / Reset Buttons]
-    ESP --> LED[Status LEDs]
-    ESP --> SENSOR[Optional Sensor Header]
+## 🛠️ Hardware Design Details
+
+### PCB Stackup Configuration
+The board utilizes a 4-layer stackup to optimize ground referencing and minimize high-frequency return path loops from the ESP32 RF circuits:
+1. **Top Layer (`F.Cu`):** High-speed signal routing and component placement.
+2. **Inner Layer 1 (`In1.Cu`):** Dedicated Solid Ground Plane (GND) for noise suppression.
+3. **Inner Layer 2 (`In2.Cu`):** Power Routing / Secondary Signal Plane.
+4. **Bottom Layer (`B.Cu`):** Auxiliary routing and ground fill.
+
+### Manufacturing Specifications
+| Parameter | Value |
+|--- |--- |
+| **Board Thickness** | 1.60 mm |
+| **Copper Layers** | 4 Layers |
+| **Minimum Trace / Space** | 0.2 mm / 0.2 mm |
+| **Component Finishes** | SMD 0603 (1608 Metric) standard optimization |
+| **Design Software** | KiCad v10.0 |
+
+---
+
+## 📂 Repository Structure
+
+```text
+├── ESP32_IoT_Board_Design.kicad_pro   # KiCad Project configuration file
+├── ESP32_IoT_Board_Design.kicad_sch   # Main Schematic design file
+├── ESP32_IoT_Board_Design.kicad_pcb   # 4-Layer PCB Layout file
+├── ESP32_IoT_Board_Design.kicad_prl   # Local project workspace preferences
+└── README.md                          # Project documentation
